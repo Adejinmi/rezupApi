@@ -1,5 +1,5 @@
-const Attendance = require('../src/database/schemas/attendance')
-const savedattendance = require('../src/database/schemas/savedAttendance')
+const Attendance = require('../database/schemas/attendance')
+const savedattendance = require('../database/schemas/savedAttendance')
 
 const saveattendance = async(req,res,next)=>{
     const { className, payload, details } = req.body

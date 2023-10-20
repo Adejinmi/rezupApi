@@ -1,4 +1,4 @@
-const Newclass = require('../src/database/schemas/class')
+const Newclass = require('../database/schemas/class')
 
 const allclass = async(req, res, next)=>{
     const createdClasses = await Newclass.find({})

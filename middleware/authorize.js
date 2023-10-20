@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken')
 const secretkey = process.env.SECRETKEY
-const createdclasses= require('../src/database/schemas/class')
+const createdclasses= require('../database/schemas/class')
 
 const authorize= async (req, res, next)=>{
     const token = req.body.password

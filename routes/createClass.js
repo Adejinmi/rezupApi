@@ -1,6 +1,6 @@
 const { Router }=require('express');
 const router = Router()
-const Newclass = require('../src/database/schemas/class')
+const Newclass = require('../database/schemas/class')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const privateKey = process.env.SECRETKEY
