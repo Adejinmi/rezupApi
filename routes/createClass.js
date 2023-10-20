@@ -10,7 +10,6 @@ router.post('', async (req, res)=>{
     const { unit, instrument, level, instructor } = req.body
     const className = `${instrument.trim()}_${level.trim()}_${instructor.trim().replaceAll(" ","_").replaceAll(",","_")}`
     const salt = await bcrypt.genSalt(10)
-    console.log(req.body.password)
     const password = await bcrypt.hash(req.body.pass, salt)
     const check = await Newclass.findOne({className})
     if (check) {
