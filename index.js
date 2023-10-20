@@ -6,7 +6,7 @@ app.use(express.json());
 const createClass = require('./routes/createClass')
 const saveAttendance = require('./routes/saveAttendance')
 const saveAssessment = require('./routes/saveAssessment')
-const saveExam = require('./routes/saveExam')
+
 const saveQuestion = require ('./routes/saveQuestion')
 const ota = require('./routes/ota')
 const retrieveClass = require('./routes/retrieveClass')
