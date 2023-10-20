@@ -17,7 +17,7 @@ app.listen(3000)
 app.use('/api/createClass', createClass);
 app.use('/api/saveAttendance', saveAttendance)
 app.use('/api/saveAssessment', saveAssessment)
-app.use('/api/saveExam', saveExam)
+
 app.use('/api/saveQuestion', saveQuestion)
 app.use('/api/ota', ota)
 app.use('/api/retrieveClass', retrieveClass)
