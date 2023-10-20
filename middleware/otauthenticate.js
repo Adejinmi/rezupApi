@@ -1,6 +1,6 @@
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
-const Newclass = require('../database/schemas/class')
+const Newclass = require('../src/database/schemas/class')
 const privateKey = process.env.SECRETKEY
 
 const otauthenticate = async (req,res,next)=>{

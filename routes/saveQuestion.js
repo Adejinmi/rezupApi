@@ -1,6 +1,6 @@
 const { Router }=require('express');
 const router = Router()
-const Question = require('../database/schemas/question')
+const Question = require('../src/database/schemas/question')
 const authorize = require('../middleware/authorize')
 
 router.use(authorize)

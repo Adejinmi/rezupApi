@@ -1,7 +1,7 @@
 const { Router }=require('express');
 const router = Router()
 const authorize = require('../middleware/authorize')
-const Attendance = require('../database/schemas/attendance')
+const Attendance = require('../src/database/schemas/attendance')
 const allclass = require('../middleware/allclass')
 const otauthenticate = require('../middleware/otauthenticate')
 const otauthroize = require ('../middleware/otauthorize')

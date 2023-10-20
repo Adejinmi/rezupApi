@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken')
-const Newclass = require('../database/schemas/class')
+const Newclass = require('../src/database/schemas/class')
 const privateKey = process.env.SECRETKEY
 
 const otauthorize = async (req,res,next)=>{

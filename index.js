@@ -1,7 +1,7 @@
 require('dotenv').config()
 const express = require('express');
 const app = express();
-require('./database');
+require('./src/database');
 app.use(express.json());
 const createClass = require('./routes/createClass')
 const saveAttendance = require('./routes/saveAttendance')

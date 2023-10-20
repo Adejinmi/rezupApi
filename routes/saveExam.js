@@ -1,7 +1,7 @@
 const { Router }=require('express');
 const router = Router()
-const Exam = require('../database/schemas/exam')
-const savedexam = require('../database/schemas/savedexam')
+const Exam = require('../src/database/schemas/exam')
+const savedexam = require('../src/database/schemas/savedexam')
 const authorize = require('../middleware/authorize')
 
 router.use(authorize)
