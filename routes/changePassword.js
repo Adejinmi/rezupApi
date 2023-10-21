@@ -13,7 +13,8 @@ router.post('', authorize, async(req,res)=>{
         const salt = await bcrypt.genSalt(10)
         const password = await bcrypt.hash(newPassword, salt)
         const resp = await createdclasses.updateOne({className}, {password})
-        var token = jwt.sign({ password: resp.password, className }, privateKey, { algorithm: 'RS256' });
+        const ress = await createdclasses.findOne({className}) 
+        var token = jwt.sign({ password: ress.password, className }, privateKey, { algorithm: 'RS256' });
         res.status(201).send({token})
     } catch (error) {
         res.sendStatus(500)
