@@ -34,7 +34,7 @@ router.post('', otauthenticate, async(req,res)=>{
             const allEx = []
             const allQue = []
             const assTak = []
-            const exTak= exTaken.exam[0]
+            const exTak= exTaken ? exTaken.exam[0] : {}
             studs.forEach(element => {
                 const { name, matric } = element
                 nominalroll.push({name,matric})
@@ -49,10 +49,13 @@ router.post('', otauthenticate, async(req,res)=>{
                 const attT = JSON.stringify({date,present,absent})
                 allAttTak.push(attT)
             });
-            assTaken.maxScore.forEach(element => {
-                const attT = JSON.stringify(element)
-                assTak.push(attT)
-            });
+            if(assTaken){
+
+                assTaken.maxScore.forEach(element => {
+                    const attT = JSON.stringify(element)
+                    assTak.push(attT)
+                });
+            }
             studAss.forEach(element => {
                 const { name, matric, assessment } = element
                 const ass = JSON.stringify(assessment[0])
@@ -74,6 +77,7 @@ router.post('', otauthenticate, async(req,res)=>{
         res.send({details, nominalroll, allAtt, allAttTak, allAss, assTak, allEx, exTak, allQue})
         
     } catch (error) {
+        console.log(error)
         res.status(500).send('Try Again')
     }
 })
