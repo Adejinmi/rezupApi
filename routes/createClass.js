@@ -8,7 +8,7 @@ const privateKey = process.env.SECRETKEY
 
 router.post('', async (req, res)=>{
     const { unit, instrument, level, instructor } = req.body
-    const className = `${instrument.trim().replaceAll(" ","_")}-${level.trim()}-${instructor.trim().replaceAll(" ","_").replaceAll(",","+")}`
+    const className = `${instrument.trim().replaceAll(" ","-")}_${level.trim()}_${instructor.trim().replaceAll(" ","-").replaceAll(",","+")}`
     const salt = await bcrypt.genSalt(10)
     const password = await bcrypt.hash(req.body.pass, salt)
     const check = await Newclass.findOne({className})
