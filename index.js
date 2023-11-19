@@ -11,8 +11,9 @@ const saveQuestion = require ('./routes/saveQuestion')
 const ota = require('./routes/ota')
 const retrieveClass = require('./routes/retrieveClass')
 const changePassword = require('./routes/changePassword')
+const admin = require('./routes/admin')
 
-app.listen(3000)
+app.listen(3001)
 
 app.use('/api/createClass', createClass);
 app.use('/api/saveAttendance', saveAttendance)
@@ -22,3 +23,4 @@ app.use('/api/saveQuestion', saveQuestion)
 app.use('/api/ota', ota)
 app.use('/api/retrieveClass', retrieveClass)
 app.use('/api/changePassword', changePassword)
+app.use('/api/admin', admin)
